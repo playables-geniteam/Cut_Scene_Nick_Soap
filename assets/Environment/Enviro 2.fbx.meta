@@ -849,7 +849,7 @@
     },
     "meshSimplify": {
       "enable": true,
-      "targetRatio": 0.5,
+      "targetRatio": 0.9,
       "autoErrorRate": false,
       "lockBoundary": false
     },

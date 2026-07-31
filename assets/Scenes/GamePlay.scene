@@ -4763,7 +4763,7 @@
     },
     "_enabled": true,
     "__prefab": null,
-    "isFirstClick_CTA": true,
+    "isFirstClick_CTA": false,
     "currentMovement": 0,
     "soundManagerNode": {
       "__id__": 139
