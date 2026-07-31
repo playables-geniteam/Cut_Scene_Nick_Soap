@@ -12,6 +12,14 @@ type Proxy = {
 
 @ccclass('ObjectsMover')
 export class ObjectsMover extends Component {
+    @property({ tooltip: 'Use different speed for first N waypoints' })
+public useDifferentSpeedForFirstPoints: boolean = false;
+
+@property({ tooltip: 'Duration for first N waypoints' })
+public firstPointsDuration: number = 1;
+
+@property({ tooltip: 'Apply different speed for first N waypoints' })
+public firstPointsCount: number = 2;
 
     @property({ type: [Node], tooltip: 'Waypoint nodes the target will travel through' })
     public waypoints: Node[] = [];
@@ -44,6 +52,18 @@ export class ObjectsMover extends Component {
     protected start(): void {
         this.startMoving();
     }
+    protected onEnable(): void {
+    this.snapToFirstWaypoint();
+}
+
+private snapToFirstWaypoint(): void {
+    if (!this.target || this.waypoints.length === 0) {
+        return;
+    }
+
+    this.target.setWorldPosition(this.waypoints[0].worldPosition);
+    this.target.setWorldRotation(this.waypoints[0].worldRotation);
+}
 
     protected onDestroy(): void {
         this.stop();
@@ -97,14 +117,24 @@ export class ObjectsMover extends Component {
     }
 
     public onPathComplete(): void {
+        if (GameManager.instance?.isGameOver) {
+            this._log(`Game already over — ignoring path complete on "${this.node.name}"`);
+            return;
+        }
+
         this._log(`onPathComplete fired on "${this.node.name}"`);
 
         // Enable Particle2 after 0.3s, disable it after 1s
         setTimeout(() => {
+            if (GameManager.instance?.isGameOver) {
+                return;
+            }
             if (GameManager.instance?.Particle2) {
                 GameManager.instance.Particle2.active = true;
                 setTimeout(() => {
-                    GameManager.instance.Particle2.active = false;
+                    if (!GameManager.instance?.isGameOver) {
+                        GameManager.instance.Particle2.active = false;
+                    }
                 }, 1000);
             }
         }, 300);
@@ -122,17 +152,8 @@ export class ObjectsMover extends Component {
 
         if (this.isLastMover && this.notifyOnComplete) {
             this._log('isLastMover + notifyOnComplete both true → showing end screen');
-            GameManager.instance.Camera.active = false;
-            GameManager.instance.Camera.active = false;
-            GameManager.instance.Camera2.active = false;
-            
-            GameManager.instance.Camera3.active = false;
-
-            GameManager.instance.Camera4.active = false;
-            GameManager.instance.Camera6.active = false;
             GameManager.instance.MissT_1.active = false;
             GameManager.instance.Character2.active = false;
-
             GameManager.instance?.showEndScreen();
         }
     }
@@ -155,12 +176,17 @@ export class ObjectsMover extends Component {
         loop: boolean,
     ): Tween<Proxy> {
 
+        
+
         const proxy: Proxy = {
             px: target.worldPosition.x,
             py: target.worldPosition.y,
             pz: target.worldPosition.z,
             t: 0,
         };
+
+        const startPos = target.worldPosition.clone();
+        const startRot = target.worldRotation.clone();
 
         const _pos = new Vec3();
         const _quat = new math.Quat();
@@ -173,7 +199,8 @@ export class ObjectsMover extends Component {
             const wp = waypoints[i];
             const dp = wp.worldPosition.clone();
 
-            const segmentDistance = Vec3.distance(prevPos, dp);
+            const segmentStart = i === 0 ? startPos.clone() : prevPos.clone();
+            const segmentDistance = Vec3.distance(segmentStart, dp);
             const segmentDuration = segmentDistance / speed;
             prevPos = dp.clone();
 
@@ -181,7 +208,7 @@ export class ObjectsMover extends Component {
             // so every segment interpolates between the two waypoint rotations,
             // not from whatever the target happens to be facing at build time.
             const fromQuat = i === 0
-                ? target.worldRotation.clone()
+                ? startRot.clone()
                 : waypoints[i - 1].worldRotation.clone();
             const toQuat = wp.worldRotation.clone();
 
@@ -195,7 +222,9 @@ export class ObjectsMover extends Component {
                 chain = chain.call(() => {
                     this._log('Reached waypoint index 3 — scheduling loop swap in 1s');
                     setTimeout(() => {
-                        GameManager.instance?.stopAndSwapToLoop1();
+                        if (!GameManager.instance?.isGameOver) {
+                            GameManager.instance?.stopAndSwapToLoop1();
+                        }
                     }, 1000);
                 });
             }

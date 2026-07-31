@@ -34,7 +34,7 @@ export class super_html_playable {
     /**
      * 设置商店地址
      * channel : unity
-     * @param url https://play.google.com/store/apps/details?id=com.zatg.scaryteacher.prankme
+     * @param url https://play.google.com/store/apps/details?id=com.zakg.scaryteacher.hellgame
      */
     set_google_play_url(url: string) {
         //@ts-ignore
@@ -44,7 +44,7 @@ export class super_html_playable {
     /**
     * 设置商店地址
     * channel : unity
-    * @param url https://apps.apple.com/us/app/the-prankster-3d/id1561787250
+    * @param url https://apps.apple.com/us/app/scary-teacher-3d/id1250783151
     */
     set_app_store_url(url: string) {
         //@ts-ignore

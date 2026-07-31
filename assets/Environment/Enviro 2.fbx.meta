@@ -844,11 +844,12 @@
     "meshOptimize": {
       "enable": true,
       "vertexCache": true,
-      "vertexFetch": true
+      "vertexFetch": true,
+      "overdraw": true
     },
     "meshSimplify": {
       "enable": true,
-      "targetRatio": 0.6,
+      "targetRatio": 0.5,
       "autoErrorRate": false,
       "lockBoundary": false
     },

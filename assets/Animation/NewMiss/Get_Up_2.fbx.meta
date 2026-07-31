@@ -91,7 +91,6 @@
       "ver": "1.1.1",
       "imported": true,
       "files": [
-        ".bin",
         ".json"
       ],
       "subMetas": {}
@@ -312,6 +311,11 @@
       "scenes": [
         "ade5e1b7-ddda-4c7f-853c-7710ad153deb@4da94"
       ]
-    }
+    },
+    "meshSimplify": {
+      "enable": true,
+      "targetRatio": 0.01
+    },
+    "tangents": 1
   }
 }

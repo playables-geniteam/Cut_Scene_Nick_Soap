@@ -108,7 +108,7 @@
         "sample": 30,
         "span": {
           "from": 0,
-          "to": 0.9666666388511658
+          "to": 0.8333333134651184
         },
         "events": []
       },
@@ -229,6 +229,54 @@
       ],
       "subMetas": {}
     },
+    "44e8a": {
+      "importer": "gltf-material",
+      "uuid": "4d1e618d-e29a-4b8c-b048-f48fa60a2c36@44e8a",
+      "displayName": "",
+      "id": "44e8a",
+      "name": "zaban.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "aa825": {
+      "importer": "gltf-material",
+      "uuid": "4d1e618d-e29a-4b8c-b048-f48fa60a2c36@aa825",
+      "displayName": "",
+      "id": "aa825",
+      "name": "lambert4.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "55b43": {
+      "importer": "gltf-material",
+      "uuid": "4d1e618d-e29a-4b8c-b048-f48fa60a2c36@55b43",
+      "displayName": "",
+      "id": "55b43",
+      "name": "lambert3.material",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
     "4cd1e": {
       "importer": "gltf-scene",
       "uuid": "4d1e618d-e29a-4b8c-b048-f48fa60a2c36@4cd1e",
@@ -259,13 +307,13 @@
     "animationImportSettings": [
       {
         "name": "Take 001",
-        "duration": 0.9666666388511658,
+        "duration": 0.8333333134651184,
         "fps": 30,
         "splits": [
           {
             "name": "Take 001",
             "from": 0,
-            "to": 0.9666666388511658,
+            "to": 0.8333333134651184,
             "wrapMode": 2,
             "previousId": "73b7f"
           }
@@ -307,7 +355,10 @@
         "4d1e618d-e29a-4b8c-b048-f48fa60a2c36@0ea87"
       ],
       "materials": [
-        "4d1e618d-e29a-4b8c-b048-f48fa60a2c36@cde4f"
+        "4d1e618d-e29a-4b8c-b048-f48fa60a2c36@cde4f",
+        "4d1e618d-e29a-4b8c-b048-f48fa60a2c36@44e8a",
+        "4d1e618d-e29a-4b8c-b048-f48fa60a2c36@aa825",
+        "4d1e618d-e29a-4b8c-b048-f48fa60a2c36@55b43"
       ],
       "scenes": [
         "4d1e618d-e29a-4b8c-b048-f48fa60a2c36@4cd1e"
@@ -401,16 +452,110 @@
           {},
           {}
         ]
+      },
+      "4d1e618d-e29a-4b8c-b048-f48fa60a2c36@44e8a": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "__editorExtras__": {},
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "c8f66d17-351a-48da-a12c-0212d28575c4",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainColor": {
+              "__type__": "cc.Color",
+              "r": 255,
+              "g": 0,
+              "b": 0,
+              "a": 255
+            },
+            "metallic": 0.407
+          },
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
       }
     },
     "meshOptimize": {
       "enable": true,
       "vertexCache": true,
-      "vertexFetch": true
+      "vertexFetch": true,
+      "overdraw": true
     },
     "meshSimplify": {
       "enable": true,
-      "targetRatio": 0.4,
+      "targetRatio": 0.75,
       "autoErrorRate": false,
       "lockBoundary": false
     },

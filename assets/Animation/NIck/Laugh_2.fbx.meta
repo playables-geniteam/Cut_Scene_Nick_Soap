@@ -287,15 +287,17 @@
       ]
     },
     "meshOptimize": {
-      "enable": true
+      "enable": true,
+      "overdraw": true
     },
     "meshSimplify": {
       "enable": true,
-      "targetRatio": 0.1
+      "targetRatio": 0.01
     },
     "meshCompress": {
       "enable": true,
       "compress": true
-    }
+    },
+    "tangents": 1
   }
 }

@@ -1,4 +1,4 @@
-import { _decorator, Component, SkeletalAnimation, AnimationClip } from 'cc';
+import { _decorator, Component, SkeletalAnimation, AnimationClip, AudioSource } from 'cc';
 import { GameManager } from './GameManager';
 import { ObjectsMover } from './ObjectsMover';
 import { SoundManager } from './SoundManager';
@@ -38,7 +38,16 @@ export class Animator extends Component {
     update(deltaTime: number) { }
 
     public playByIndex(index: number): void {
-        if (!this.animator) {
+
+        // return;
+        // if(index)
+let delay =0;
+
+        setTimeout(() => {
+
+    
+
+ if (!this.animator) {
             console.warn('[Animator] No SkeletalAnimation assigned.');
             return;
         }
@@ -62,6 +71,11 @@ export class Animator extends Component {
         if (index === 4) {
             GameManager.instance?.enableMissT1_Mover3();
         }
+        }, delay);
+
+
+
+       
     }
 
     public playSequenceFrom(startIndex: number): void {
@@ -108,7 +122,7 @@ export class Animator extends Component {
             this._sequenceTimeout = null;
             this.playByIndex(index);
             this._scheduleNext(index + 1);
-        }, delay * 1000);
+        }, delay * 600);
     }
 
     protected onDestroy(): void {
@@ -153,6 +167,8 @@ export class Animator extends Component {
     }
 
     public PlayAnimSoap(): void {
+        
+      
         if (!this.animator) {
             console.warn('[Animator] No SkeletalAnimation assigned.');
             return;
@@ -187,6 +203,10 @@ export class Animator extends Component {
                 // +7s → crossfade to index 0
                 setTimeout(() => {
                     this._smoothCrossFade(0);
+                    this.getComponent(AudioSource).play();
+                    setTimeout(() => {
+                        this.getComponent(AudioSource).play();
+                    }, 1000);
                 }, 7000);
 
             }, 2000);

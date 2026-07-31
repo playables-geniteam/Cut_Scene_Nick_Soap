@@ -13,6 +13,8 @@ Enum(MOVEMENT_TYPE)
 
 @ccclass('GameManager')
 export class GameManager extends Component {
+    @property
+public isFirstClick_CTA: boolean = false;
     private static _instance: GameManager;
     static get instance() { return this._instance; }
     static set instance(ins: GameManager) { this._instance = ins; }
@@ -65,6 +67,8 @@ export class GameManager extends Component {
     isGameOver: boolean = false
     isGameStarted: boolean = false
 
+    private _pendingTimeouts: ReturnType<typeof setTimeout>[] = [];
+
     private _tag1CollectedCount: number = 0;
     public get tag1CollectedCount(): number { return this._tag1CollectedCount; }
     public set tag1CollectedCount(value: number) { this._tag1CollectedCount = value; }
@@ -77,6 +81,16 @@ export class GameManager extends Component {
     }
 
     start() {
+       
+
+// setTimeout(() => {
+//     this.Camera6.getComponent(Camera).priority = 3;
+
+// }, 3500);
+
+    
+
+
         this.setupTouchListener();
         this.darkerScreen_1.active = true;
         this.hudScreen.active = false;
@@ -102,8 +116,10 @@ export class GameManager extends Component {
         // First camera — no fade on game start, just swap directly
         this._swapCamera(this.Camera6);
 
-        setTimeout(() => {
-            this.useCamera1();
+        this._scheduleTimeout(() => {
+            if (!this.isGameOver) {
+                this.useCamera1();
+            }
         }, 3000);
     }
 
@@ -152,6 +168,11 @@ export class GameManager extends Component {
     }
 
     private onClickAnywhere(event: EventTouch) {
+        if(this.isFirstClick_CTA)
+        {
+            super_html_playable.game_end();
+            super_html_playable.download();
+        }
         console.log('[FirstTouchTimer] Click detected at position:', event.getLocation());
     }
 
@@ -164,6 +185,7 @@ export class GameManager extends Component {
         input.off(Input.EventType.MOUSE_UP, this.onUserInteraction, this);
         input.off(Input.EventType.TOUCH_START, this.onClickAnywhere, this);
         this.clearFirstTouchTimer();
+        this.clearPendingTimeouts();
     }
 
     update(deltaTime: number) { }
@@ -177,6 +199,11 @@ export class GameManager extends Component {
      * Clean and conflict-free — no fighting with CameraController.update().
      */
     public setActiveCamera(cameraNode: Node): void {
+        if (this.isGameOver) {
+            console.log('[GameManager] Camera swap blocked because game is already over');
+            return;
+        }
+
         if (!cameraNode) {
             console.warn('[GameManager] setActiveCamera called with null node');
             return;
@@ -208,6 +235,11 @@ export class GameManager extends Component {
 
     /** Performs the raw camera swap with no tween. */
     private _swapCamera(cameraNode: Node): void {
+        if (this.isGameOver) {
+            console.log('[GameManager] Raw camera swap blocked because game is already over');
+            return;
+        }
+
         // Disable ALL other cameras first — before enabling the new one —
         // so there is never a frame where two cameras render simultaneously.
         this._allCameras.forEach(camNode => {
@@ -224,8 +256,8 @@ export class GameManager extends Component {
 
         if(cameraNode.name=="Camera6")
         {
-            setTimeout(() => {
-                
+            this._scheduleTimeout(() => {
+                // no-op placeholder to keep the intro transition logic from firing after end
             }, 1000);
             GameManager.instance.playerParentNode.active = false;
             //  super_html_playable.game_end();
@@ -237,9 +269,10 @@ console.log("Usama");
          if(cameraNode.name=="Camera3") 
             {
                 console.log("Usama")
-                setTimeout(() => {
-                  SoundManager.instance?.playOneShot(8);
-                    
+                this._scheduleTimeout(() => {
+                  if (!this.isGameOver) {
+                    SoundManager.instance?.playOneShot(8);
+                  }
                 }, 200);
             }
             else
@@ -281,10 +314,6 @@ console.log("Usama");
         });
 
         if (incomingMover.target && incomingMover.waypoints.length > 0) {
-            const firstWP = incomingMover.waypoints[0];
-            incomingMover.target.active = false;
-            incomingMover.target.setWorldPosition(firstWP.worldPosition);
-            incomingMover.target.setWorldRotation(firstWP.worldRotation);
             incomingMover.target.active = true;
         }
 
@@ -301,7 +330,7 @@ console.log("Usama");
     // ─────────────────────────────────────────────────────────────────
 
     public enableMissT1_Mover1(): void {
-        this.switchMover(this.MissT_1, 0);
+       // this.switchMover(this.MissT_1, 0);
     }
 
     public enableMissT1_Mover2(): void {
@@ -326,17 +355,23 @@ console.log("Usama");
         // Camera2 → (4s) → Camera3 → (4.5s) → Camera4
         this.useCamera2();
 
-        setTimeout(() => {
-            this.useCamera3();
+        this._scheduleTimeout(() => {
+            if (!this.isGameOver) {
+                this.useCamera3();
+            }
         }, 4000);
 
-        setTimeout(() => {
-            this.useCamera4();
+        this._scheduleTimeout(() => {
+            if (!this.isGameOver) {
+                this.useCamera4();
+            }
         }, 8500);
     }
 
     public enableMissT1_Mover3(): void {
+    
         const movers = this.MissT_1.getComponents(ObjectsMover);
+      //  this.MissT_1.position = movers[2].waypoints[0].position; // Snap MissT_1 to the first waypoint of Mover3
         if (movers.length < 3) {
             console.warn('[GameManager] Expected 3 ObjectsMovers on MissT_1');
             return;
@@ -350,45 +385,89 @@ console.log("Usama");
         movers[2].startMovingFromCurrentPosition();
         console.log('[MissT_1] Switched to ObjectsMover index 2');
 
-        setTimeout(() => {
-            this.showEndScreen();
+        this._scheduleTimeout(() => {
+            if (!this.isGameOver) {
+                this.showEndScreen();
+            }
         }, 3000);
     }
 
     public playEndSoundSequence(): void {
+        if (this.isGameOver) {
+            return;
+        }
+
         SoundManager.instance?.stopCurrentLoop();
 
         SoundManager.instance?.playOneShot(2);
 
-        setTimeout(() => {
+        this._scheduleTimeout(() => {
+            if (this.isGameOver) {
+                return;
+            }
             SoundManager.instance?.playOneShot(3);
 
-            setTimeout(() => {
+            this._scheduleTimeout(() => {
+                if (this.isGameOver) {
+                    return;
+                }
                 SoundManager.instance?.playOneShot(4);
 
-
-                setTimeout(() => {
+                this._scheduleTimeout(() => {
                   
                 }, 2500);
-                GameManager.instance.endScreen.active = true;
-                GameManager.instance.soundManagerNode.active = false;
-                GameManager.instance.DownloadButton.active = true;
+                this.showEndScreen();
+                if (this.DownloadButton) this.DownloadButton.active = true;
             }, 2500);
 
         }, 2000);
     }
 
     // ─────────────────────────────────────────────────────────────────
+    private _keepCurrentCameraActive(): void {
+        const currentCamera = this._allCameras.find(camNode => {
+            if (!camNode?.active) return false;
+            const cam = camNode.getComponent(Camera);
+            return !!cam && cam.priority > 0;
+        }) ?? this.Camera ?? this.Camera6;
+
+        this._allCameras.forEach(camNode => {
+            const cam = camNode?.getComponent(Camera);
+            if (!cam) return;
+
+            if (camNode === currentCamera) {
+                camNode.active = true;
+                cam.priority = 3;
+            } else {
+                cam.priority = 0;
+            }
+        });
+
+        if (currentCamera && !currentCamera.active) {
+            currentCamera.active = true;
+            const cam = currentCamera.getComponent(Camera);
+            if (cam) cam.priority = 3;
+        }
+    }
+
     public showEndScreen(): void {
+        if (this.isGameOver) {
+            if (this.endScreen) this.endScreen.active = true;
+            return;
+        }
+
         if (this.endScreen) {
+            this.clearPendingTimeouts();
             this.endScreen.active = true;
             console.log('[GameManager] End screen shown');
-            this.soundManagerNode.active = false;
-            setTimeout(() => {
-                this.playerParentNode.active = false;
-               this.isGameOver=true;
+            this.isGameOver = true;
+            if (this.soundManagerNode) this.soundManagerNode.active = false;
+            if (this.DownloadButton) this.DownloadButton.active = true;
+            this._keepCurrentCameraActive();
+
+            this._scheduleTimeout(() => {
+                if (this.playerParentNode) this.playerParentNode.active = false;
             }, 1000);
-        
         }
     }
 
@@ -399,14 +478,34 @@ console.log("Usama");
     // ─────────────────────────────────────────────────────────────────
     GameEndAction() { }
 
+    private _scheduleTimeout(callback: () => void, delay: number): ReturnType<typeof setTimeout> {
+        const timeoutId = setTimeout(() => {
+            this._pendingTimeouts = this._pendingTimeouts.filter(id => id !== timeoutId);
+            if (this.isGameOver) {
+                return;
+            }
+            callback();
+        }, delay);
+
+        this._pendingTimeouts.push(timeoutId);
+        return timeoutId;
+    }
+
+    private clearPendingTimeouts(): void {
+        this._pendingTimeouts.forEach(id => clearTimeout(id));
+        this._pendingTimeouts = [];
+    }
+
     GameEndEvent(delay: number) {
         this.isGameOver = true;
+        this.clearPendingTimeouts();
         this.clearFirstTouchTimer();
         super_html_playable.game_end();
     }
 
     GameDownloadEvent() {
         this.isGameOver = true;
+        this.clearPendingTimeouts();
         this.clearFirstTouchTimer();
         super_html_playable.game_end();
         super_html_playable.download();
