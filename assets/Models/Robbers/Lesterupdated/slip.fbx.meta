@@ -1,0 +1,396 @@
+{
+  "ver": "2.3.14",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309",
+  "files": [
+    "__original-animation-0.bin"
+  ],
+  "subMetas": {
+    "30732": {
+      "importer": "gltf-skeleton",
+      "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@30732",
+      "displayName": "",
+      "id": "30732",
+      "name": "UnnamedSkeleton-0.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 8
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "62553": {
+      "importer": "gltf-mesh",
+      "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@62553",
+      "displayName": "",
+      "id": "62553",
+      "name": "frances_playable_v04:face.mesh",
+      "userData": {
+        "gltfIndex": 4,
+        "triangleCount": 1986
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "62756": {
+      "importer": "gltf-skeleton",
+      "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@62756",
+      "displayName": "",
+      "id": "62756",
+      "name": "UnnamedSkeleton-5.skeleton",
+      "userData": {
+        "gltfIndex": 5,
+        "jointsLength": 56
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "90440": {
+      "importer": "gltf-mesh",
+      "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@90440",
+      "displayName": "",
+      "id": "90440",
+      "name": "frances_playable_v04:Lower_Teeth.mesh",
+      "userData": {
+        "gltfIndex": 3,
+        "triangleCount": 88
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "95122": {
+      "importer": "gltf-scene",
+      "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@95122",
+      "displayName": "",
+      "id": "95122",
+      "name": "slip.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "28a1b": {
+      "importer": "gltf-mesh",
+      "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@28a1b",
+      "displayName": "",
+      "id": "28a1b",
+      "name": "frances_playable_v04:Tongue.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 86
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "37bb0": {
+      "importer": "gltf-mesh",
+      "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@37bb0",
+      "displayName": "",
+      "id": "37bb0",
+      "name": "frances_playable_v04:Right_Eye.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 240
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a97e9": {
+      "importer": "gltf-mesh",
+      "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@a97e9",
+      "displayName": "",
+      "id": "a97e9",
+      "name": "frances_playable_v04:hand.mesh",
+      "userData": {
+        "gltfIndex": 2,
+        "triangleCount": 1556
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "767e6": {
+      "importer": "gltf-mesh",
+      "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@767e6",
+      "displayName": "",
+      "id": "767e6",
+      "name": "frances_playable_v04:body.mesh",
+      "userData": {
+        "gltfIndex": 5,
+        "triangleCount": 1492
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "73b7f": {
+      "importer": "gltf-animation",
+      "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@73b7f",
+      "displayName": "",
+      "id": "73b7f",
+      "name": "slip.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 1,
+        "sample": 30,
+        "span": {
+          "from": 0.79161244307578,
+          "to": 1.8241504123050583
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "f1394": {
+      "importer": "gltf-skeleton",
+      "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@f1394",
+      "displayName": "",
+      "id": "f1394",
+      "name": "UnnamedSkeleton-1.skeleton",
+      "userData": {
+        "gltfIndex": 1,
+        "jointsLength": 55
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "75ee4": {
+      "importer": "gltf-skeleton",
+      "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@75ee4",
+      "displayName": "",
+      "id": "75ee4",
+      "name": "UnnamedSkeleton-2.skeleton",
+      "userData": {
+        "gltfIndex": 2,
+        "jointsLength": 48
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a72ab": {
+      "importer": "gltf-skeleton",
+      "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@a72ab",
+      "displayName": "",
+      "id": "a72ab",
+      "name": "UnnamedSkeleton-3.skeleton",
+      "userData": {
+        "gltfIndex": 3,
+        "jointsLength": 14
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2224c": {
+      "importer": "gltf-skeleton",
+      "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@2224c",
+      "displayName": "",
+      "id": "2224c",
+      "name": "UnnamedSkeleton-4.skeleton",
+      "userData": {
+        "gltfIndex": 4,
+        "jointsLength": 96
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c0f0e": {
+      "importer": "gltf-embeded-image",
+      "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@c0f0e",
+      "displayName": "",
+      "id": "c0f0e",
+      "name": "frances_playable_v04:base_color_texture.image",
+      "userData": {
+        "gltfIndex": 0,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": true,
+        "type": "texture"
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "d9606": {
+      "importer": "texture",
+      "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@d9606",
+      "displayName": "",
+      "id": "d9606",
+      "name": "frances_playable_v04:base_color_texture.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@c0f0e"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c1e5a": {
+      "importer": "gltf-material",
+      "uuid": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@c1e5a",
+      "displayName": "",
+      "id": "c1e5a",
+      "name": "frances_playable_v04:MMB_Baked.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "frances_playable_v04:base_color_texture",
+        "uri": "79c8b4e5-6451-4a15-bc60-cf6c818ca309@c0f0e"
+      }
+    ],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "Take 001",
+        "duration": 3.9666666984558105,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "slip",
+            "from": 0.79161244307578,
+            "to": 1.8241504123050583,
+            "wrapMode": 1,
+            "previousId": "73b7f"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "79c8b4e5-6451-4a15-bc60-cf6c818ca309@28a1b",
+        "79c8b4e5-6451-4a15-bc60-cf6c818ca309@37bb0",
+        "79c8b4e5-6451-4a15-bc60-cf6c818ca309@a97e9",
+        "79c8b4e5-6451-4a15-bc60-cf6c818ca309@90440",
+        "79c8b4e5-6451-4a15-bc60-cf6c818ca309@62553",
+        "79c8b4e5-6451-4a15-bc60-cf6c818ca309@767e6"
+      ],
+      "skeletons": [
+        "79c8b4e5-6451-4a15-bc60-cf6c818ca309@30732",
+        "79c8b4e5-6451-4a15-bc60-cf6c818ca309@f1394",
+        "79c8b4e5-6451-4a15-bc60-cf6c818ca309@75ee4",
+        "79c8b4e5-6451-4a15-bc60-cf6c818ca309@a72ab",
+        "79c8b4e5-6451-4a15-bc60-cf6c818ca309@2224c",
+        "79c8b4e5-6451-4a15-bc60-cf6c818ca309@62756"
+      ],
+      "textures": [
+        "79c8b4e5-6451-4a15-bc60-cf6c818ca309@d9606"
+      ],
+      "materials": [
+        "79c8b4e5-6451-4a15-bc60-cf6c818ca309@c1e5a"
+      ],
+      "scenes": [
+        "79c8b4e5-6451-4a15-bc60-cf6c818ca309@95122"
+      ]
+    },
+    "meshSimplify": {
+      "enable": true,
+      "targetRatio": 0.001
+    },
+    "tangents": 1
+  }
+}

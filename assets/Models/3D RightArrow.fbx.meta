@@ -179,6 +179,7 @@
     "meshCompress": {
       "enable": true,
       "compress": true
-    }
+    },
+    "tangents": 1
   }
 }

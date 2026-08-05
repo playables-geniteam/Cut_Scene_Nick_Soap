@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "c892671e-1a29-4ba9-92ff-a3bbe9ac1e7c",
+  "uuid": "c8930762-a0dc-41bc-bcbf-b413c2d14f69",
   "files": [
     ".jpg",
     ".json"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "c892671e-1a29-4ba9-92ff-a3bbe9ac1e7c@6c48a",
+      "uuid": "c8930762-a0dc-41bc-bcbf-b413c2d14f69@6c48a",
       "displayName": "Lester",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "c892671e-1a29-4ba9-92ff-a3bbe9ac1e7c",
+        "imageUuidOrDatabaseUri": "c8930762-a0dc-41bc-bcbf-b413c2d14f69",
         "visible": false
       },
       "ver": "1.0.22",
@@ -37,6 +37,6 @@
     "type": "texture",
     "fixAlphaTransparencyArtifacts": false,
     "hasAlpha": false,
-    "redirect": "c892671e-1a29-4ba9-92ff-a3bbe9ac1e7c@6c48a"
+    "redirect": "c8930762-a0dc-41bc-bcbf-b413c2d14f69@6c48a"
   }
 }

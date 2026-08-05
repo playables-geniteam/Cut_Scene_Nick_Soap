@@ -466,7 +466,8 @@
     },
     "meshSimplify": {
       "enable": true,
-      "targetRatio": 0.01
+      "targetRatio": 0.01,
+      "errorRate": 1
     },
     "meshCompress": {
       "enable": true,

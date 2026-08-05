@@ -15,11 +15,29 @@
       "name": "UnnamedSkeleton-0.skeleton",
       "userData": {
         "gltfIndex": 0,
-        "jointsLength": 30
+        "jointsLength": 8
       },
       "ver": "1.0.1",
       "imported": true,
       "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "62553": {
+      "importer": "gltf-mesh",
+      "uuid": "f7ff2003-1cf8-406f-a4ac-546cc9448c88@62553",
+      "displayName": "",
+      "id": "62553",
+      "name": "frances_playable_v04:face.mesh",
+      "userData": {
+        "gltfIndex": 4,
+        "triangleCount": 1986
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
         ".json"
       ],
       "subMetas": {}
@@ -32,7 +50,7 @@
       "name": "UnnamedSkeleton-5.skeleton",
       "userData": {
         "gltfIndex": 5,
-        "jointsLength": 14
+        "jointsLength": 56
       },
       "ver": "1.0.1",
       "imported": true,
@@ -41,15 +59,33 @@
       ],
       "subMetas": {}
     },
-    "cc9c7": {
+    "90440": {
       "importer": "gltf-mesh",
-      "uuid": "f7ff2003-1cf8-406f-a4ac-546cc9448c88@cc9c7",
+      "uuid": "f7ff2003-1cf8-406f-a4ac-546cc9448c88@90440",
       "displayName": "",
-      "id": "cc9c7",
-      "name": "frances_playable_v04:Felix:Cavity_tongue.mesh",
+      "id": "90440",
+      "name": "frances_playable_v04:Lower_Teeth.mesh",
+      "userData": {
+        "gltfIndex": 3,
+        "triangleCount": 88
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "28a1b": {
+      "importer": "gltf-mesh",
+      "uuid": "f7ff2003-1cf8-406f-a4ac-546cc9448c88@28a1b",
+      "displayName": "",
+      "id": "28a1b",
+      "name": "frances_playable_v04:Tongue.mesh",
       "userData": {
         "gltfIndex": 0,
-        "triangleCount": 180
+        "triangleCount": 86
       },
       "ver": "1.1.1",
       "imported": true,
@@ -59,32 +95,14 @@
       ],
       "subMetas": {}
     },
-    "292fc": {
+    "37bb0": {
       "importer": "gltf-mesh",
-      "uuid": "f7ff2003-1cf8-406f-a4ac-546cc9448c88@292fc",
+      "uuid": "f7ff2003-1cf8-406f-a4ac-546cc9448c88@37bb0",
       "displayName": "",
-      "id": "292fc",
-      "name": "frances_playable_v04:Felix:Felix_Cunning_Teeth.mesh",
+      "id": "37bb0",
+      "name": "frances_playable_v04:Right_Eye.mesh",
       "userData": {
         "gltfIndex": 1,
-        "triangleCount": 70
-      },
-      "ver": "1.1.1",
-      "imported": true,
-      "files": [
-        ".bin",
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "cbc60": {
-      "importer": "gltf-mesh",
-      "uuid": "f7ff2003-1cf8-406f-a4ac-546cc9448c88@cbc60",
-      "displayName": "",
-      "id": "cbc60",
-      "name": "frances_playable_v04:Felix:Felix_Eye.mesh",
-      "userData": {
-        "gltfIndex": 2,
         "triangleCount": 240
       },
       "ver": "1.1.1",
@@ -95,15 +113,15 @@
       ],
       "subMetas": {}
     },
-    "09b2a": {
+    "a97e9": {
       "importer": "gltf-mesh",
-      "uuid": "f7ff2003-1cf8-406f-a4ac-546cc9448c88@09b2a",
+      "uuid": "f7ff2003-1cf8-406f-a4ac-546cc9448c88@a97e9",
       "displayName": "",
-      "id": "09b2a",
-      "name": "frances_playable_v04:Felix:Felix_face.mesh",
+      "id": "a97e9",
+      "name": "frances_playable_v04:hand.mesh",
       "userData": {
-        "gltfIndex": 3,
-        "triangleCount": 1822
+        "gltfIndex": 2,
+        "triangleCount": 1556
       },
       "ver": "1.1.1",
       "imported": true,
@@ -113,33 +131,15 @@
       ],
       "subMetas": {}
     },
-    "1f53f": {
+    "767e6": {
       "importer": "gltf-mesh",
-      "uuid": "f7ff2003-1cf8-406f-a4ac-546cc9448c88@1f53f",
+      "uuid": "f7ff2003-1cf8-406f-a4ac-546cc9448c88@767e6",
       "displayName": "",
-      "id": "1f53f",
-      "name": "frances_playable_v04:Felix:Felix_hat.mesh",
-      "userData": {
-        "gltfIndex": 4,
-        "triangleCount": 2904
-      },
-      "ver": "1.1.1",
-      "imported": true,
-      "files": [
-        ".bin",
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "01963": {
-      "importer": "gltf-mesh",
-      "uuid": "f7ff2003-1cf8-406f-a4ac-546cc9448c88@01963",
-      "displayName": "",
-      "id": "01963",
-      "name": "frances_playable_v04:Felix:cavity_upper_teeth.mesh",
+      "id": "767e6",
+      "name": "frances_playable_v04:body.mesh",
       "userData": {
         "gltfIndex": 5,
-        "triangleCount": 35
+        "triangleCount": 1492
       },
       "ver": "1.1.1",
       "imported": true,
@@ -161,7 +161,7 @@
         "sample": 30,
         "span": {
           "from": 0.4278380353642131,
-          "to": 3.2333333492279053
+          "to": 2.433333396911621
         },
         "events": []
       },
@@ -180,7 +180,7 @@
       "name": "UnnamedSkeleton-1.skeleton",
       "userData": {
         "gltfIndex": 1,
-        "jointsLength": 41
+        "jointsLength": 55
       },
       "ver": "1.0.1",
       "imported": true,
@@ -197,7 +197,7 @@
       "name": "UnnamedSkeleton-2.skeleton",
       "userData": {
         "gltfIndex": 2,
-        "jointsLength": 84
+        "jointsLength": 48
       },
       "ver": "1.0.1",
       "imported": true,
@@ -214,7 +214,7 @@
       "name": "UnnamedSkeleton-3.skeleton",
       "userData": {
         "gltfIndex": 3,
-        "jointsLength": 175
+        "jointsLength": 14
       },
       "ver": "1.0.1",
       "imported": true,
@@ -231,7 +231,7 @@
       "name": "UnnamedSkeleton-4.skeleton",
       "userData": {
         "gltfIndex": 4,
-        "jointsLength": 116
+        "jointsLength": 96
       },
       "ver": "1.0.1",
       "imported": true,
@@ -240,12 +240,12 @@
       ],
       "subMetas": {}
     },
-    "2e206": {
+    "d9606": {
       "importer": "texture",
-      "uuid": "f7ff2003-1cf8-406f-a4ac-546cc9448c88@2e206",
+      "uuid": "f7ff2003-1cf8-406f-a4ac-546cc9448c88@d9606",
       "displayName": "",
-      "id": "2e206",
-      "name": "frances_playable_v04:Felix:base_color_texture.texture",
+      "id": "d9606",
+      "name": "frances_playable_v04:base_color_texture.texture",
       "userData": {
         "wrapModeS": "repeat",
         "wrapModeT": "repeat",
@@ -254,7 +254,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": false,
-        "imageUuidOrDatabaseUri": "db://assets/Models/Robbers/FLex/Felix.jpg"
+        "imageUuidOrDatabaseUri": "db://assets/Models/Robbers/FLex/Lester.jpg"
       },
       "ver": "1.0.22",
       "imported": true,
@@ -263,30 +263,14 @@
       ],
       "subMetas": {}
     },
-    "eefe5": {
+    "c1e5a": {
       "importer": "gltf-material",
-      "uuid": "f7ff2003-1cf8-406f-a4ac-546cc9448c88@eefe5",
+      "uuid": "f7ff2003-1cf8-406f-a4ac-546cc9448c88@c1e5a",
       "displayName": "",
-      "id": "eefe5",
-      "name": "frances_playable_v04:Felix:MMB_Baked-0.material",
+      "id": "c1e5a",
+      "name": "frances_playable_v04:MMB_Baked.material",
       "userData": {
         "gltfIndex": 0
-      },
-      "ver": "1.0.14",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
-      "subMetas": {}
-    },
-    "c0c72": {
-      "importer": "gltf-material",
-      "uuid": "f7ff2003-1cf8-406f-a4ac-546cc9448c88@c0c72",
-      "displayName": "",
-      "id": "c0c72",
-      "name": "frances_playable_v04:Felix:MMB_Baked-1.material",
-      "userData": {
-        "gltfIndex": 1
       },
       "ver": "1.0.14",
       "imported": true,
@@ -315,8 +299,8 @@
   "userData": {
     "imageMetas": [
       {
-        "name": "frances_playable_v04:Felix:base_color_texture",
-        "uri": "db://assets/Models/Robbers/FLex/Felix.jpg"
+        "name": "frances_playable_v04:base_color_texture",
+        "uri": "db://assets/Models/Robbers/FLex/Lester.jpg"
       }
     ],
     "fbx": {
@@ -325,13 +309,13 @@
     "animationImportSettings": [
       {
         "name": "Take 001",
-        "duration": 3.2333333492279053,
+        "duration": 2.433333396911621,
         "fps": 30,
         "splits": [
           {
             "name": "angry",
             "from": 0.4278380353642131,
-            "to": 3.2333333492279053,
+            "to": 2.433333396911621,
             "wrapMode": 2,
             "previousId": "73b7f"
           }
@@ -358,12 +342,12 @@
     },
     "assetFinder": {
       "meshes": [
-        "f7ff2003-1cf8-406f-a4ac-546cc9448c88@cc9c7",
-        "f7ff2003-1cf8-406f-a4ac-546cc9448c88@292fc",
-        "f7ff2003-1cf8-406f-a4ac-546cc9448c88@cbc60",
-        "f7ff2003-1cf8-406f-a4ac-546cc9448c88@09b2a",
-        "f7ff2003-1cf8-406f-a4ac-546cc9448c88@1f53f",
-        "f7ff2003-1cf8-406f-a4ac-546cc9448c88@01963"
+        "f7ff2003-1cf8-406f-a4ac-546cc9448c88@28a1b",
+        "f7ff2003-1cf8-406f-a4ac-546cc9448c88@37bb0",
+        "f7ff2003-1cf8-406f-a4ac-546cc9448c88@a97e9",
+        "f7ff2003-1cf8-406f-a4ac-546cc9448c88@90440",
+        "f7ff2003-1cf8-406f-a4ac-546cc9448c88@62553",
+        "f7ff2003-1cf8-406f-a4ac-546cc9448c88@767e6"
       ],
       "skeletons": [
         "f7ff2003-1cf8-406f-a4ac-546cc9448c88@30732",
@@ -374,11 +358,10 @@
         "f7ff2003-1cf8-406f-a4ac-546cc9448c88@62756"
       ],
       "textures": [
-        "f7ff2003-1cf8-406f-a4ac-546cc9448c88@2e206"
+        "f7ff2003-1cf8-406f-a4ac-546cc9448c88@d9606"
       ],
       "materials": [
-        "f7ff2003-1cf8-406f-a4ac-546cc9448c88@eefe5",
-        "f7ff2003-1cf8-406f-a4ac-546cc9448c88@c0c72"
+        "f7ff2003-1cf8-406f-a4ac-546cc9448c88@c1e5a"
       ],
       "scenes": [
         "f7ff2003-1cf8-406f-a4ac-546cc9448c88@c1b84"
@@ -553,11 +536,107 @@
           {},
           {}
         ]
+      },
+      "f7ff2003-1cf8-406f-a4ac-546cc9448c88@c1e5a": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "__editorExtras__": {},
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "f648964e-8d32-41fc-9ac9-7a1e714dd17b",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {
+            "DCC_APP_NAME": 5,
+            "USE_ALBEDO_MAP": true,
+            "USE_EMISSIVE_MAP": true
+          },
+          {},
+          {},
+          {}
+        ],
+        "_states": [
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          },
+          {
+            "rasterizerState": {},
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "c8930762-a0dc-41bc-bcbf-b413c2d14f69@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            },
+            "emissiveMap": {
+              "__uuid__": "c8930762-a0dc-41bc-bcbf-b413c2d14f69@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            },
+            "emissiveScale": 0.3,
+            "shininessExponent": 25,
+            "specularColor": {
+              "__type__": "cc.Color",
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 255
+            }
+          },
+          {},
+          {},
+          {}
+        ]
       }
     },
     "meshSimplify": {
       "enable": true,
-      "targetRatio": 1
-    }
+      "targetRatio": 0.5
+    },
+    "tangents": 1,
+    "meshCompress": {
+      "enable": true,
+      "compress": true,
+      "quantize": true
+    },
+    "meshOptimize": {
+      "enable": true,
+      "overdraw": true
+    },
+    "allowMeshDataAccess": false,
+    "disableMeshSplit": false
   }
 }
