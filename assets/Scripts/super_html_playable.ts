@@ -34,7 +34,7 @@ export class super_html_playable {
     /**
      * 设置商店地址
      * channel : unity
-     * @param url https://play.google.com/store/apps/details?id=com.zakg.scaryteacher.hellgame
+     * @param url https://play.google.com/store/apps/details?id=com.zatg.scaryrobber.boylife&hl=en
      */
     set_google_play_url(url: string) {
         //@ts-ignore
@@ -44,7 +44,7 @@ export class super_html_playable {
     /**
     * 设置商店地址
     * channel : unity
-    * @param url https://apps.apple.com/us/app/scary-teacher-3d/id1250783151
+    * @param url https://apps.apple.com/us/app/scary-robber-home-clash/id1520587481
     */
     set_app_store_url(url: string) {
         //@ts-ignore

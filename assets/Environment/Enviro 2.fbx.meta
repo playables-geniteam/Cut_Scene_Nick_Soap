@@ -848,8 +848,8 @@
       "overdraw": true
     },
     "meshSimplify": {
-      "enable": true,
-      "targetRatio": 0.9,
+      "enable": false,
+      "targetRatio": 0.45,
       "autoErrorRate": false,
       "lockBoundary": false
     },

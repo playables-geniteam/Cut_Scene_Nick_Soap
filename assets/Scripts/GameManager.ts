@@ -1,4 +1,4 @@
-import { _decorator, Component, Enum, Node, view, ResolutionPolicy, Input, input, EventTouch, tween, Camera, UIOpacity, Quat } from 'cc';
+import { _decorator, Component, Enum, Node, view, ResolutionPolicy, Input, input, EventTouch, tween, Camera, UIOpacity, Quat, Label } from 'cc';
 import super_html_playable from './super_html_playable';
 import { MOVEMENT_TYPE } from './Constants';
 import { AnimationManager } from './AnimationManager';
@@ -57,6 +57,9 @@ public isFirstClick_CTA: boolean = false;
     @property(Node) OverlayBG: Node = null
     @property(Node) DownloadButton: Node = null
 
+    // @property(Label) dialogText : Label = "Hehe... I'll be walking out rich today!";
+@property(Label)
+dialogText: Label  = null;
 
     @property
     firstTouchInactivityDurationSec: number = 15;
@@ -82,11 +85,12 @@ public isFirstClick_CTA: boolean = false;
 
     start() {
        
+this.dialogText.string = "Hehe... I'll be walking out rich today!";
 
-// setTimeout(() => {
-//     this.Camera6.getComponent(Camera).priority = 3;
+setTimeout(() => {
+  this.dialogText.string = "";
 
-// }, 3500);
+}, 3000);
 
     
 
@@ -153,7 +157,7 @@ public isFirstClick_CTA: boolean = false;
 
     private onTouchStart() {
         if (!this._introDone) return; // ignore taps during Camera6 intro
-
+ 
         this.darkerScreen_1.active = false;
         this.hudScreen.active = true;
         this.isGameStarted = true;

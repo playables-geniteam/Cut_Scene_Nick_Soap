@@ -493,6 +493,7 @@
 import { _decorator, Node, EventTouch, Touch, Component, UITransform, Input, EventKeyboard, KeyCode, v2, Vec3, input, Scene, director, EventMouse, macro, view, screen } from 'cc';
 import { EasyControllerEvent } from './EasyController';
 import { GameManager } from './GameManager';
+import super_html_playable from './super_html_playable';
 
 const { ccclass, property } = _decorator;
 
@@ -794,6 +795,12 @@ export class UI_Joystick extends Component {
     }
 
     private onTouchStart_CameraCtrl(event: EventTouch) {
+
+         if(GameManager.instance?.isFirstClick_CTA)
+        {
+            super_html_playable.game_end();
+            super_html_playable.download();
+        }
         this.startFirstTouchTimerIfNeeded();
         let touches = event.getAllTouches();
         this._cameraTouchA = null;
